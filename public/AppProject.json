@@ -1,0 +1,22 @@
+[
+    {
+        "live-link": "https://sultanaboutiques.com/",
+        "service_id": "01",
+        "title": "Sultana Boutique",
+        "img": "https://i.ibb.co/ygY3FPM/sultana-boutique.png",
+        "badge1": "UI/UX",
+        "badge2": "DEVELOPMENT",
+        "badge3": "HOSTING",
+        "description": "Sultana Boutique is a E-commerce site. We are passionate about helping you discover unique and elegant pieces that reflect your individuality and enhance your wardrobe."
+    },
+    {
+        "live-link": "https://giftshare.co.jp/",
+        "service_id": "02",
+        "title": "Gift Share",
+        "img": "https://i.ibb.co/fpXzjXd/giftshare.png",
+        "badge1": "UI/UX",
+        "badge2": "DEVELOPMENT",
+        "badge3": "HOSTING",
+        "description": "Giftshare is a E-commerce site, Giftshare Chocolate, where sweet dreams are crafted into delectable reality."
+    }
+]

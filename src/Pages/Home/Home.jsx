@@ -1,7 +1,8 @@
 import CarouselBanner from "../../Components/CarouselBanner/CarouselBanner";
 import ClientsReview from "../../Components/ClientsReview/ClientReview";
 import ContactForm from "../../Components/ContactForm/ContactForm";
-import LogIn from "../../Components/LogIn/LogIn";
+// import LogIn from "../../Components/LogIn/LogIn";
+// import SignUp from "../../Components/SignUp/SignUp";
 import WhyUs from "../../Components/WhyUs/WhyUs";
 import Portfolio from "../Portfolio/Portfolio";
 import TechStacks from "../TechStacks/TechStacks";
@@ -9,7 +10,6 @@ import TechStacks from "../TechStacks/TechStacks";
 const Home = () => {
   return (
     <div>
-     <LogIn/>
       <CarouselBanner />
       <Portfolio />
       <ClientsReview />

@@ -1,35 +1,60 @@
-// import { useContext } from "react";
-import { Link } from "react-router-dom";
-// import { AuthContext } from "../../Authentication/AuthProvider";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Authentication/AuthProviders";
+import Swal from "sweetalert2";
 const SignUp = () => {
-//   const { createUser } = useContext(AuthContext);
-//   const handleSignUp = (event) => {
-//     event.preventDefault();
-//     const form = event.target;
-//     const email = form.email.value;
-//     const password = form.password.value;
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-//     createUser(email, password)
-//       .then((result) => {
-//         const user = result.user;
-//         console.log(user);
-//       })
-//       .catch((error) => console.log(error));
-//   };
+  const handleSignUp = (data) => {
+    data.preventDefault();
+    const form = data.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    createUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        updateUserProfile(email)
+        .then(()=>{
+          fetch("http://localhost:5000/users", {
+             method: "POST",
+             headers: {
+               "content-type": "application/json",
+             },
+             body: JSON.stringify(loggedUser),
+           })
+           .then((res) => res.json())
+           .then((data) => {
+            if (data.email === email) {
+              // reset();
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "User created successfully.",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              navigate("/");
+            }
+        })
+          })
+        .catch((error) => console.log(error));
+      })
+  };
 
   return (
     <div className="hero-content py-20 lg:py-28">
       <div className="card flex-shrink-0 w-full max-w-sm shadow-xl bg-base-300">
         <div className="card-body">
           <h1 className="text-3xl text-center font-bold">SignUp</h1>
-          {/* <form onSubmit={handleSignUp}> */}
-          <form>
+          <form onSubmit={handleSignUp}>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
               <input
-                type="text"
+                type="email"
                 name="email"
                 placeholder="email"
                 className="input input-bordered"
@@ -40,7 +65,7 @@ const SignUp = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="text"
+                type="password"
                 name="password"
                 placeholder="password"
                 className="input input-bordered"

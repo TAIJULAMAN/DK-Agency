@@ -1,0 +1,46 @@
+[
+    {
+        "_id": "01",
+        "name": "fahad bin bashar",
+        "img": "https://i.ibb.co/hmp3w2p/Fahad-vai.jpg",
+        "stack": "full stack developer", 
+        "fb": "https://www.facebook.com/tohirulislamtohir",
+        "git": "https://www.facebook.com/tohirulislamtohir",
+        "li": "https://www.facebook.com/tohirulislamtohir",
+        "gl": "https://www.facebook.com/tohirulislamtohir",
+        "desc": "Overseeing all technology operations and evaluating them according to the goals."
+    },
+    {
+        "_id": "02",
+        "name": "Borhan Ahmed",
+        "img": "https://i.ibb.co/BsPX6V8/borhan.jpg",
+        "stack": "full stack developer", 
+        "fb": "https://www.facebook.com/tohirulislamtohir",
+        "git": "https://www.facebook.com/tohirulislamtohir",
+        "li": "https://www.facebook.com/tohirulislamtohir",
+        "gl": "https://www.facebook.com/tohirulislamtohir",
+        "desc": "Overseeing all technology operations and evaluating them according to the goals."
+    },
+    {
+        "_id": "03",
+        "name": "fahad bin bashar",
+        "img": "https://i.ibb.co/qg6LRR2/khorshed-photo.jpg",
+        "stack": "full stack developer", 
+        "fb": "https://www.facebook.com/tohirulislamtohir",
+        "git": "https://www.facebook.com/tohirulislamtohir",
+        "li": "https://www.facebook.com/tohirulislamtohir",
+        "gl": "https://www.facebook.com/tohirulislamtohir",
+        "desc": "Overseeing all technology operations and evaluating them according to the goals."
+    },
+    {
+        "_id": "04",
+        "name": "fahad bin bashar",
+        "img": "https://i.ibb.co/hmp3w2p/Fahad-vai.jpg",
+        "stack": "full stack developer", 
+        "fb": "https://www.facebook.com/tohirulislamtohir",
+        "git": "https://www.facebook.com/tohirulislamtohir",
+        "li": "https://www.facebook.com/tohirulislamtohir",
+        "gl": "https://www.facebook.com/tohirulislamtohir",
+        "desc": "Overseeing all technology operations and evaluating them according to the goals."
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "01",
+        "name": "fahad bin bashar",
+        "img": "https://i.ibb.co/hmp3w2p/Fahad-vai.jpg",
+        "position": "Managing Director", 
+        "desc": "Overseeing all technology operations and evaluating them according to the goals."
+    },
+    {
+        "_id": "02",
+        "name": "fahad bin bashar",
+        "img": "https://i.ibb.co/hmp3w2p/Fahad-vai.jpg",
+        "position": "Managing Director", 
+        "desc": "Overseeing all technology operations and evaluating them according to the goals."
+    },
+    {
+        "_id": "03",
+        "name": "fahad bin bashar",
+        "img": "https://i.ibb.co/hmp3w2p/Fahad-vai.jpg",
+        "position": "Managing Director", 
+        "desc": "Overseeing all technology operations and evaluating them according to the goals."
+    },
+    {
+        "_id": "04",
+        "name": "fahad bin bashar",
+        "img": "https://i.ibb.co/hmp3w2p/Fahad-vai.jpg",
+        "position": "Managing Director", 
+        "desc": "Overseeing all technology operations and evaluating them according to the goals."
+    }
+
+   
+]

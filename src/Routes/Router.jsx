@@ -8,6 +8,14 @@ import AppDev from "../Pages/AppDev/AppDev";
 import WebDev from "../Pages/WebDev/WebDev";
 import SignUp from "../Components/SignUp/SignUp";
 import LogIn from "../Components/LogIn/LogIn";
+// import AdminRoute from "./AdminRoute/AdminRoute";
+import DashBoard from "../Components/DashBoard/DashBoard/DashBoard";
+import AppPage from "../Components/DashBoard/AppPage/AppPage";
+import ReviewPage from "../Components/DashBoard/ReviewPage/ReviewPage";
+import UserPage from "../Components/DashBoard/UserPage/UserPage";
+import WebPage from "../Components/DashBoard/WebPage/WebPage";
+import AddReview from "../Components/DashBoard/ReviewPage/AddReview";
+// import PrivateRoute from "./PrivateRoute/PrivateRoute";
 const router = createBrowserRouter([
     {
         path: '/',
@@ -47,6 +55,32 @@ const router = createBrowserRouter([
             },
         ],
     },
+    {
+        path: "/dashboard",
+        element:<DashBoard/>,
+        children: [
+          {
+            path: "app",
+            element:<AppPage/>
+          },
+          {
+            path: "review",
+            element:<ReviewPage/>,
+          },
+          {
+            path: "review/addreview",
+            element:<AddReview/>
+          },
+          {
+            path: "allusers",
+            element:<UserPage/>
+          },
+          {
+            path: "web",
+            element:<WebPage/>
+          }
+        ]
+      }
 
 ])
 export default router;
