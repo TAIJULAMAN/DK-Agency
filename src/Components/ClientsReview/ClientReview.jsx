@@ -16,11 +16,11 @@ const ClientsReview = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 4000, min: 1024 },
-      items: 2,
+      items: 1,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -52,17 +52,8 @@ const ClientsReview = () => {
               className="pb-8"
             >
   {reviews.map((review) => (
-            <div key={review._id} className="bg-base-100 p-5 border mx-2 ">
-            <div className="flex my-5 text-justify ">
-              {" "}
-              <span>
-                <FaQuoteLeft className="text-xl mr-3" />
-              </span>{" "}
-              <p className="text-gray-400">
-               {review.desc}
-              </p>
-            </div>
-            <div className="flex items-center gap-4">
+            <div key={review._id} className="bg-base-100 px-5 py-10 mx-5 shadow-lg rounded-lg">
+               <div className="flex justify-center items-center gap-4">
               <img
                 src={review.img}
                 alt=""
@@ -80,6 +71,16 @@ const ClientsReview = () => {
                 </span>
               </div>
             </div>
+            <div className="flex my-5 justify-center text-center ">
+              {" "}
+              <span>
+                <FaQuoteLeft className="text-xl mr-3" />
+              </span>{" "}
+              <p className="text-gray-400">
+               {review.desc}
+              </p>
+            </div>
+           
           </div>
           ))}
 
