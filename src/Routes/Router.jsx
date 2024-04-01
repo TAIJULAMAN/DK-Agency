@@ -15,6 +15,8 @@ import ReviewPage from "../Components/DashBoard/ReviewPage/ReviewPage";
 import UserPage from "../Components/DashBoard/UserPage/UserPage";
 import WebPage from "../Components/DashBoard/WebPage/WebPage";
 import AddReview from "../Components/DashBoard/ReviewPage/AddReview";
+import AddWeb from "../Components/DashBoard/WebPage/AddWeb";
+import AddApp from "../Components/DashBoard/AppPage/AddApp";
 // import PrivateRoute from "./PrivateRoute/PrivateRoute";
 const router = createBrowserRouter([
     {
@@ -64,6 +66,10 @@ const router = createBrowserRouter([
             element:<AppPage/>
           },
           {
+            path: "app/addapp",
+            element:<AddApp/>
+          },
+          {
             path: "review",
             element:<ReviewPage/>,
           },
@@ -78,6 +84,10 @@ const router = createBrowserRouter([
           {
             path: "web",
             element:<WebPage/>
+          },
+          {
+            path: "web/addweb",
+            element:<AddWeb/>
           }
         ]
       }

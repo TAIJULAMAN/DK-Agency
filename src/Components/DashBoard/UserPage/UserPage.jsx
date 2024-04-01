@@ -10,7 +10,6 @@ const AllUsers = () => {
     queryFn: async () => {
       const res = await axiosSecure.get("/users");
       return res.data;
-      // console.log(res.data)
     },
   });
 
@@ -66,14 +65,14 @@ const AllUsers = () => {
 
   return (
     <div className="w-full">
-      <h3 className="text-3xl font-semibold my-4">
+      <h3 className="text-3xl font-semibold my-4 text-center">
         Total Users: {users.length}
       </h3>
       <div className="overflow-x-auto">
         <table className="table w-full">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="border-b-2 border-gray-200">
               <th>#</th>
               <th>Name</th>
               <th>Email</th>
@@ -83,7 +82,7 @@ const AllUsers = () => {
           </thead>
           <tbody>
             {users.map((user, index) => (
-              <tr key={user._id}>
+              <tr key={user._id} className="border-b-2 border-gray-200">
                 <th>{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
@@ -102,7 +101,7 @@ const AllUsers = () => {
                 <td>
                   <button
                     onClick={() => handleDelete(user)}
-                    className="btn btn-ghost bg-red-600  text-white"
+                    className="btn btn-ghost bg-red-600  text-white hover:text-black"
                   >
                     <FaTrashAlt></FaTrashAlt>
                   </button>
