@@ -53,30 +53,40 @@ const ReviewPage = () => {
           Total Reviews: {reviews.length}
         </h3>
         <Link to="/dashboard/review/addreview">
-          <input className="btn btn-sm mt-4 px-3 py-2" type="submit" value="Add Review" />
+          <input className="btn btn-sm mt-4 px-4 py-2" type="submit" value="Add Review" />
         </Link>
       </div>
 
       <div className="overflow-x-auto">
-        <table className="table table-zebra w-full">
+        <table className="table w-full">
           <thead>
-            <tr>
+            <tr className="border-b-2 border-gray-200">
               <th>#</th>
+              <th>Picture</th>
               <th>Name</th>
+              <th>Description</th>
               <th>Position</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
             {reviews.map((review, index) => (
-              <tr key={review._id}>
+              <tr key={review._id} className="border-b-2 border-gray-200">
                 <th>{index + 1}</th>
+                <td>
+                <div className="avatar">
+                    <div className="mask mask-squircle w-12 h-12">
+                      <img src={review.img} alt="people image" />
+                    </div>
+                  </div>
+                </td>
                 <td>{review.name}</td>
+                <td>{review.desc}</td>
                 <td>{review.position}</td>
                 <td>
                   <button
                     onClick={() => handleDelete(review)}
-                    className="btn btn-ghost bg-red-600  text-white"
+                    className="btn btn-ghost bg-red-600  text-white hover:text-black"
                   >
                     <FaTrashAlt></FaTrashAlt>
                   </button>
